@@ -54,7 +54,7 @@ export default function SignUp() {
         date.setTime(date.getTime() + decodedToken.exp);
         document.cookie = 'token =' + response.data.token + ';expires=' + date.toGMTString() + '; SameSite=Strict; Secure; ';       
           toast.success('Registration completed successfully!')
-          navigate('/profile')
+          navigate('/')
         
         }).catch((erro)=>{
           if(erro){

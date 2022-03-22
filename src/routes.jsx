@@ -4,7 +4,7 @@ import { useAuth } from "./hooks/Auth";
 import { toast } from "react-toastify";
 import Login from "./pages/Login"
 import Register from "./pages/Register"
-import Profile from "./pages/Profile";
+import Profile from "./pages/";
 import Template404 from './pages/404';
 import Change from "./pages/ChangePassword" 
 
@@ -26,9 +26,9 @@ export default function AllRoutes() {
     return (
       <BrowserRouter>
         <Routes>
-          <Route path='/login' element={<LoggedRoute redirectTo='/profile'><Login /></LoggedRoute>} />
-          <Route path='/register' element={<LoggedRoute redirectTo='/profile'><Register /></LoggedRoute>} />
-          <Route path='/profile' element={<PrivateRoute redirectTo='/login'><Profile /></PrivateRoute>} />
+          <Route path='/login' element={<LoggedRoute redirectTo='/'><Login /></LoggedRoute>} />
+          <Route path='/register' element={<LoggedRoute redirectTo='/'><Register /></LoggedRoute>} />
+          <Route path='/' element={<PrivateRoute redirectTo='/login'><Profile /></PrivateRoute>} />
           <Route path='/changepassword' element={<PrivateRoute redirectTo='/login'><Change /></PrivateRoute>} />
           <Route path='*' element={<Template404 />} />
         </Routes>

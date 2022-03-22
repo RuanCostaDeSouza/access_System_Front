@@ -33,7 +33,7 @@ export default function Change() {
         console.log (user.id)
          api.put(`/change/password/${user?.id}`, payload).then( () => {
             toast.success('Password changed successfully!')
-            navigate('/profile')
+            navigate('/')
             
             }).catch((erro)=>{
               if(erro){
@@ -63,7 +63,7 @@ export default function Change() {
             />
             <Stack spacing={2} direction="row" margin="normal">
               <Button variant="contained" onClick={changeSubmit}>Change password</Button>
-              <Button variant="contained" href='/profile'>Cancel</Button>
+              <Button variant="contained" href='/'>Cancel</Button>
               
             </Stack>
 
