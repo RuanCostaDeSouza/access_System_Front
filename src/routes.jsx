@@ -4,7 +4,7 @@ import { useAuth } from "./hooks/Auth";
 import { toast } from "react-toastify";
 import Login from "./pages/Login"
 import Register from "./pages/Register"
-import Profile from "./pages/";
+import Profile from "./pages/Profile";
 import Template404 from './pages/404';
 import Change from "./pages/ChangePassword" 
 
