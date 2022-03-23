@@ -31,7 +31,7 @@ export default function SignUp() {
 
   const handleSubmit =  (event) => {
     event.preventDefault();
-    if(newPassword !== confirm){
+    if(password !== confirm){
       toast.warn("passwords do not match")
       return
     }
